@@ -14,6 +14,7 @@
         body {
             background: #1a1a1a;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
@@ -25,6 +26,14 @@
             border-radius: 20px;
             padding: 20px;
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+        }
+
+        .lebel {
+            color: #fff;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 20px;
         }
 
         #display {
@@ -78,10 +87,18 @@
             background: #ff4757;
             color: #fff;
         }
+
+        .author {
+            color: #fff;
+            font-size: 1rem;
+            text-align: center;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
     <div class="calculator">
+        <p class="lebel">Simple JS Calculator</p>
         <input type="text" id="display" readonly>
         <div class="buttons">
             <button class="clear" onclick="clearDisplay()">C</button>
@@ -103,6 +120,7 @@
             <button class="number" onclick="appendNumber('0')" style="grid-column: span 3;">0</button>
         </div>
     </div>
+    <div class="author">Author: <a href="https://github.com/Shams-Ud-Doha" target="_blank">Shams</a></div>
 
     <script>
         const display = document.getElementById('display');
